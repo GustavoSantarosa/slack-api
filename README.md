@@ -8,12 +8,12 @@ Modo de uso
 
 use GustavoSantarosa\slackApi;
 
-//Aqui voce vai iniciar o construtor com a chave passada pelo slack
-$slackApi = new slackApi("sua chave");
-//Aqui voce vai passar como parametro o canal sem o jogo da velha # e depois a mensagem que deseja.
-$slackApi->enviarMsg("teste", "teste2");
-//Caso haja algum problema, ou qualquer retorno do slack, voce pode utilizar o callback para ver.
-$fleshdesk->callback();
+    //Aqui voce vai iniciar o construtor com a chave passada pelo slack
+    $slackApi = new slackApi("sua chave");
+    //Aqui voce vai passar como parametro o canal sem o jogo da velha # e depois a mensagem que deseja.
+    $slackApi->enviarMsg("teste", "teste2");
+    //Caso haja algum problema, ou qualquer retorno do slack, voce pode utilizar o callback para ver.
+    $fleshdesk->callback();
 
 Contributing
 
