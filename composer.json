@@ -1,0 +1,33 @@
+{
+    "name": "gustavoSantarosa/slackApi",
+    "description": "Conversores para automatizar as views",
+    "keywords": [
+        "GustavoSantarosa",
+        "Bolota",
+        "slackapi",
+        "Slack"
+      ],
+    "homepage":"http://www.gustavosantarosa.esy.es/",
+    "license":"MIT",
+    "authors": [
+        {
+            "name": "Luis Gustavo Santarosa Pinto",
+            "email": "gustavo-computacao@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php":"^7.2"
+    },
+    "autoload":{
+        "psr-4":{
+            "GustavoSantarosa\\slackApi\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.0-dev"
+        }
+    },
+    "minimum-stability": "stable"
+}
