@@ -1,8 +1,8 @@
 # Slack Api
 Api para enviar msg automatico para o slack
 
-Documentation
-
+Documentação
+Por hora só é possivel enviar mensagens para um canal especifico, em breve sera introduzido as demais funções.
 
 Modo de uso
 
@@ -17,10 +17,11 @@ use GustavoSantarosa\slackApi;
     $fleshdesk->callback();
 ```
 
-#### Settings
+#### Configurações
 
-The default settings are pretty good, but you may wish to set up default behaviour for your client to be used for all messages sent. **All settings are optional and you don't need to provide any**. Where not provided, we'll fallback to what is configured on the webhook integration, which are [managed at Slack](https://my.slack.com/apps/manage/custom-integrations), or our sensible defaults.
+Em breve estas funções serão incluidas.
 
+As configurações padrão são muito boas, mas você pode desejar configurar o comportamento padrão para o seu cliente a ser usado em todas as mensagens enviadas. Todas as configurações são opcionais e você não precisa fornecer nenhuma. Onde não for fornecido, recuaremos para o que está configurado na integração do webhook, que é gerenciado no Slack, ou nossos padrões sensíveis.
 Field | Type | Description
 ----- | ---- | -----------
 `channel` | string | The default channel that messages will be sent to
