@@ -14,7 +14,7 @@ use GustavoSantarosa\slackApi;
     // Aqui voce vai passar como parametro o canal sem o jogo da velha # e depois a mensagem que deseja.
     $slackApi->enviarMsg("teste", "teste2");
     // Caso haja algum problema, ou qualquer retorno do slack, voce pode utilizar o callback para ver.
-    $fleshdesk->callback();
+    $slackApi->callback();
 ```
 
 #### Configurações

@@ -23,10 +23,10 @@ class slackApi {
     private $callback;
 
     /**
-     * Key do slack
-     *
-     * @param [type] $apiKey
-     */
+    * Key do slack
+    *
+    * @param [type] $apiKey
+    */
     public function __construct($apiKey){
 
         /**
@@ -35,19 +35,19 @@ class slackApi {
         $this->apiUrl = "https://slack.com/api";
 
         /**
-         * Chave da Api
-         */
+        * Chave da Api
+        */
         $this->apiKey = $apiKey;
     }
 
-/**
- * Enviar mensagem, basta digitar o canal e a mensagem em seguida.
- * lembrando que precisa ter a key no construtor como parametro
- *
- * @param string $canal
- * @param string $mensagem
- * @return void
- */
+    /**
+    * Enviar mensagem, basta digitar o canal e a mensagem em seguida.
+    * lembrando que precisa ter a key no construtor como parametro
+    *
+    * @param string $canal
+    * @param string $mensagem
+    * @return void
+    */
     public function enviarMsg(string $canal, string $mensagem=null){
 
         if($mensagem == ""){
@@ -64,28 +64,26 @@ class slackApi {
             "channel" => "#".$canal,
             "text"  => $mensagem
         ];
-        var_dump( $this->build);
         $this->post();
         return $this->build;
     }
 
-     /**
-      * Função para apresentar o retorno da Api caso tenha
-      *
-      * @return void
-      */
+    /**
+    * Função para apresentar o retorno da Api caso tenha
+    *
+    * @return void
+    */
     public function callback(){
         return $this->callback;
     }
 
     /**
-     * Função utilizada para efetuar a requisição via Post com a api
-     *
-     * @return void
-     */
+    * Função utilizada para efetuar a requisição via Post com a api
+    *
+    * @return void
+    */
     private function post(){
-
-        $header[] = "Content-type: application/json";
+        $ch = curl_init($this->apiUrl . $this->endPoint);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $this->build);
